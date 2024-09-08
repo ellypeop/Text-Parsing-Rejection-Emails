@@ -11,6 +11,12 @@ Masters coursework analysing a [rejection email dataset](https://www.kaggle.com/
 - numpy 1.26.4
 - matplotlib 3.9.2
 
+## NLTK Downloader
+
+This only needs to be run once and can be commented out afterwards. When run in Pycharm a dialogue box appears, download all packages and close the dialogue once complete.
+To complete the process without GUI press d for download, when asked which package to download type book, then type q to quit once the installation is complete. 
+
+
 ## Boxplot Explanation
 
 A boxplot was selected for quantitative data comparison of token lengths between the two rejection statuses, the choice being its ability to convey high-level numeric information at a glance. The whiskers extending out of the box depict a minimum and maximum token length for each status. The median value is the combination of a notch and an orange line in the box. The mean token length is depicted with a green diamond. Outliers, notably only in the not_reject email status, are shown as red dots. The lower and upper quartiles are the leftmost and rightmost sections of the box, representing the token lengths before and after the median value. Their edges are calculated by a new median value of their respective groups. 
