@@ -4,6 +4,7 @@ Masters coursework analysing a [rejection email dataset](https://www.kaggle.com/
 
 ## Python Packages
 
+- Python version 3.12
 - jupyter 1.1.1
 - pandas 2.2.2
 - gensim 4.3.3 (install before numpy)
