@@ -6,9 +6,9 @@ Masters coursework analysing a [rejection email dataset](https://www.kaggle.com/
 
 This Jupyter workbook explores patterns within a dataset of 129 job rejection emails, categorized as either “reject” or “non_reject.” The dataset has a nearly balanced distribution: 65 emails were labelled as "reject" and 64 as "non_reject."
 
-# Python Packages
+# Python Version & Packages
 
-- Python version 3.12
+- python 3.12
 - jupyter 1.1.1
 - pandas 2.2.2
 - gensim 4.3.3 (install before numpy)
@@ -34,4 +34,8 @@ The variation in token length is greater in the non_reject emails having the low
 There is an insignificant difference in the mean lexical richness for each rejection status with both at 0.72%. There is a slightly higher count of richness in the not-reject emails which remains consistent with previous observations in the token lengths; not-reject emails have greater variation with a slight increase in unique tokens therefore implying a broader vocabulary. This is compared to the reject emails which have a more uniform length and a more limited vocabulary.
 
 # Section B - Independent Exploration and Analysis
+
+## Name Addressing
+
+The first analysis counted emails where the recipient, Seth, was addressed by his first name to assess the level of personalisation. The results showed 11 instances in rejection emails and 14 in non-rejection emails. Additionally, 2 rejection emails misspelled Seth’s name as "eth." A bar chart was chosen for its efficiency in conveying quantitative information. The lower frequency of name usage and the incorrect spelling in rejection emails highlight a lack of personalisation in the rejection emails.
 
