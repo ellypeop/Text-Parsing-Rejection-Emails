@@ -1,9 +1,12 @@
 # Text-Parsing-Rejection-Emails
 Masters coursework analysing a [rejection email dataset](https://www.kaggle.com/datasets/sethpoly/application-rejection-emails) <br>
 [Inspiration and code samples](https://towardsdatascience.com/i-built-a-reject-not-reject-email-classifier-for-my-job-applications-844a3b6cd67e) <br>
-The analysis up to the first Word2Vec model was set out by the university, any work after this was independent exploration of the dataset
 
-## Python Packages
+# Introduction 
+
+This Jupyter workbook explores patterns within a dataset of 129 job rejection emails, categorized as either “reject” or “non_reject.” The dataset has a nearly balanced distribution: 65 emails were labelled as "reject" and 64 as "non_reject."
+
+# Python Packages
 
 - Python version 3.12
 - jupyter 1.1.1
@@ -13,11 +16,12 @@ The analysis up to the first Word2Vec model was set out by the university, any w
 - numpy 1.26.4
 - matplotlib 3.9.2
 
-## NLTK Downloader
+# NLTK Downloader
 
 This only needs to be run once and can be commented out afterwards. When run in Pycharm a dialogue box appears, download all packages and close the dialogue once complete.
 To complete the process without GUI press d for download, when asked which package to download type book, then type q to quit once the installation is complete. 
 
+# Section A - University Guided Analysis
 
 ## Boxplot Explanation
 
@@ -29,4 +33,5 @@ The variation in token length is greater in the non_reject emails having the low
 
 There is an insignificant difference in the mean lexical richness for each rejection status with both at 0.72%. There is a slightly higher count of richness in the not-reject emails which remains consistent with previous observations in the token lengths; not-reject emails have greater variation with a slight increase in unique tokens therefore implying a broader vocabulary. This is compared to the reject emails which have a more uniform length and a more limited vocabulary.
 
+# Section B - Independent Exploration and Analysis
 
