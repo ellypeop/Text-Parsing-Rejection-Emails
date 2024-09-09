@@ -39,3 +39,10 @@ There is an insignificant difference in the mean lexical richness for each rejec
 
 The first analysis counted emails where the recipient, Seth, was addressed by his first name to assess the level of personalisation. The results showed 11 instances in rejection emails and 14 in non-rejection emails. Additionally, 2 rejection emails misspelled Seth’s name as "eth." A bar chart was chosen for its efficiency in conveying quantitative information. The lower frequency of name usage and the incorrect spelling in rejection emails highlight a lack of personalisation in the rejection emails.
 
+## Boxplot Values
+
+The second investigation focused on obtaining the exact figures from the earlier boxplot, which provided an overview of token lengths in rejection and non-rejection emails.
+
+Accessing these exact values opened up several opportunities for deeper dataset exploration. Analysing the outliers was considered however, due to these only existing within the non-rejection emails, it would not present any findings which could be compared between the two email types. Instead, by observing the minimum token counts from each email type, two instances were selected with a similar token count, 20 and 22, to build parser trees and explore their grammatical construction.
+
+
