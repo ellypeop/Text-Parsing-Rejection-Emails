@@ -15,6 +15,9 @@ This Jupyter workbook explores patterns within a dataset of 129 job rejection em
 - nltk 3.9.1
 - numpy 1.26.4
 - matplotlib 3.9.2
+- transformers 4.44.2
+- seaborn 0.13.2
+- pytorch [installation instructions for your system found here](https://pytorch.org/get-started/locally/)
 
 # NLTK Downloader
 
