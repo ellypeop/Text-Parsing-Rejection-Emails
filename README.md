@@ -19,6 +19,8 @@ This Jupyter workbook explores patterns within a dataset of 129 job rejection em
 - seaborn 0.13.2
 - pytorch [installation instructions for your system found here](https://pytorch.org/get-started/locally/)
 
+run "pip install -r requirements.txt" in the terminal to install the packages required for this project
+
 # NLTK Downloader
 
 This only needs to be run once and can be commented out afterwards. When run in Pycharm a dialogue box appears, download all packages and close the dialogue once complete.
