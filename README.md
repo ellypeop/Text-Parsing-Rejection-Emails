@@ -45,4 +45,24 @@ The second investigation focused on obtaining the exact figures from the earlier
 
 Accessing these exact values opened up several opportunities for deeper dataset exploration. Analysing the outliers was considered however, due to these only existing within the non-rejection emails, it would not present any findings which could be compared between the two email types. Instead, by observing the minimum token counts from each email type, two instances were selected with a similar token count, 20 and 22, to build parser trees and explore their grammatical construction.
 
+## Token Parsing
+
+Preprocessing was applied to remove punctuation and empty strings.  Neither Stemming nor Lemmatization was required for these emails as they consisted of unique tokens, therefore already existing in their root form. POS tagging was applied and observations were made with and without stop word removal due to concerns that it may prove counterintuitive when analysing the sentence grammar.
+
+Some noteworthy observations made were “PatientsLikeMe” being incorrectly classed as an adjective, perhaps due to the capitalisation removal. “Seth” was also incorrectly classified as a verb. Issues did arise with the removal of stop words specifically with the rejection email instance; “not” is removed which had serious implications for the context behind the email. “Engineer” was changed from a noun to a verb once stop words were removed. This could be due to the removal of “with your" indicating it is an action rather than a string of possessive nouns.
+ 
+The RegexpParser was used to define grammatical patterns in the instances using regular expressions indicating whether the POS can be optional (?) repeated (*) or contain multiples of a similar type (V. = VB, VBN, VBZ etc) [Source for regular expressions symbols](https://pythonprogramming.net/regular-expressions-regex-tutorial-python-3/). 
+
+The baseline structure for the RegexParser was obtained from [a Stack Overflow query](https://stackoverflow.com/a/71492485/23331537) and built upon by analysing the POS tags  to consider the numerical values in the non-rejection email, optional consideration of adverbs in the rejection email, and repeated nouns due to the noun string “Full Stack Software Engineer Application” [Source for POS tags](https://pythonprogramming.net/natural-language-toolkit-nltk-part-speech-tagging/)
+
+The clarity of the non-rejection email is retained with and without the stop word removal. This is due to the matter of fact nature the email possesses where the purpose is to convey to the recipient that a financial statement, within a specific time frame, has been generated.
+
+The same cannot be said for the rejection email. Observing the structure where stop words have been removed, the exclusion of “not to” gives the email an entirely different meaning. Excluding the token “unfortunately” it could be confused for an acceptance email. A newly constructed “engineer application” verb phrase has been created due to the inaccurate classification of “engineer”. The prepositional phrase “at this time” is entirely lost resulting in “time” without any context. When the stop words are removed in the rejection email it becomes nonsensical.
+ 
+The contrast between these two examples indicates that a non-rejection email has the luxury to be matter-of-fact whereas a rejection email is constricted to using “gentle” language. The use of phrases like “move forward” being proactive and “at this time” encouraging hope for a successful application in the future, gives an overall positive tone which betrays the true intent of the message.  The rejection email depends on stop words to convey its meaning or to retain its original context.
+ 
+The results from these two case samples imply that issues could arise where stop word removal is applied to the whole dataset before analysis. The intention of the email can be inadvertently changed. This brings us to our final experiment where we observe the positive, negative and neutral sentiment of the entire dataset.
+
+## Sentiment Analysis
+
 
