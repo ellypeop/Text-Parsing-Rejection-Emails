@@ -1,6 +1,6 @@
 # Text-Parsing-Rejection-Emails
 Masters coursework analysing a [rejection email dataset](https://www.kaggle.com/datasets/sethpoly/application-rejection-emails) <br>
-[Inspiration and code samples](https://towardsdatascience.com/i-built-a-reject-not-reject-email-classifier-for-my-job-applications-844a3b6cd67e)
+[Inspiration and code samples](https://towardsdatascience.com/i-built-a-reject-not-reject-email-classifier-for-my-job-applications-844a3b6cd67e) <br>
 The analysis up to the first Word2Vec model was set out by the university, any work after this was independent exploration into the dataset
 
 ## Python Packages
