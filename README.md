@@ -68,4 +68,13 @@ The results from these two case samples imply that issues could arise where stop
 
 ## Sentiment Analysis
 
+The VADER NLTK module and RoBERTa transformer module were used to compare sentiment analysis across the dataset. VADER assigns a sentiment score to each token which is then aggregated to assess the overall sentiment of the email. RoBERTa, an improved variant of the BERT model,  is a pre-trained neural network used for sentiment analysis. It is considered to have better accuracy due to its ability to capture the context and relationship between words.[Source 1](https://medium.com/@rslavanyageetha/vader-a-comprehensive-guide-to-sentiment-analysis-in-python-c4f1868b0d2e)[Source 2](https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9145112&fileOId=914511)
+ 
+The scores for each model were calculated and added to the data frame. Using Seaborn the results were then visualised as a heatmap to observe the variance of sentiment counts between the different models and respective email types. A heatmap was chosen to illustrate the qualitative nature of each model's sentiment outputs.
+
+The results show that the majority of the emails have a positive sentiment which is to be expected due to emails generally being written in a polite manner. This begs the question as to whether sentiment analysis is an appropriate tool in the remit of email analysis, however, it does allow us to explore the difficulties natural language processing techniques face when presented with a rejection email. We would assume that being rejected for a job should be indicative of negative sentiment.  
+
+Out of the 65 rejection emails, RoBERTa detected 8 as negative, while VADER identified only 3. Analysis revealed that the token "unfortunately" was a key indicator of negative sentiment. RoBERTa successfully recognised this sentiment regardless of the keyword's position in the email, whereas VADER only detected negative sentiment when "unfortunately" appeared at the beginning. This discrepancy may be due to VADER's sensitivity to other tokens, which it might interpret as noise, while RoBERTa better accounts for contextual cues within the email. Both models struggled in determining rejection emails as neutral instead of negative due to the presence of positive language, with Vader classing 8 as neutral and RoBERTa classing 5 as neutral. This is surprising as RoBERTa is considered a stronger model. Its potential difficulty may stem from its contextual approach, which considers the overall context of the email rather than evaluating each word’s sentiment in isolation. Consequently, the presence of positive language may have negatively impacted RoBERTa’s ability to accurately classify the email's true intent.
+
+
 
